@@ -1,12 +1,6 @@
-import Login from '../components/LoginComponent';
 import React from 'react';
+import Login from '../components/LoginComponent';
 
-const LoginView = () => {
-    return (
-        <div className="container">
-            <Login/>
-        </div>
-    )
-}
+const LoginView = () => <div className="container"><Login /></div>;
 
 export default LoginView;
