@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
-import signUp from '../redux/actions/userActions';
+import signUp from '../../redux/actions/userActions';
 
 class SignUpPage extends React.Component {
   constructor(props, context) {
