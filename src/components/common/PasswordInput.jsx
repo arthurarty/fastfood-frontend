@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TextInput = ({
+const PasswordInput = ({
   name, label, onChange, placeHolder, value,
 }) => {
-  const wrapperClass = 'form-group';
+  const wrapperClass = 'form_group';
   return (
-    <div id="wrapperClass" className={wrapperClass}>
+    <div className={wrapperClass}>
       <label htmlFor={name}>{label}</label>
       <div className="field">
         <input
-          type="text"
+          type="password"
           name={name}
           className="form-control"
           placeholder={placeHolder}
@@ -22,13 +22,12 @@ const TextInput = ({
   );
 };
 
-TextInput.propTypes = {
+PasswordInput.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeHolder: PropTypes.string,
   value: PropTypes.string,
-  error: PropTypes.string,
 };
 
-export default TextInput;
+export default PasswordInput;

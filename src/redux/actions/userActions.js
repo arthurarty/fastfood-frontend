@@ -3,10 +3,6 @@ import * as types from './actionTypes';
 
 const apiUrl = 'http://127.0.0.1:5000/v1/orders';
 
-export default function signUp(user) {
-  return { type: types.CREATE_USER, user };
-}
-
 export function createOrderSuccess(order) {
   return { type: types.CREATE_ORDER_SUCCESS, order };
 }

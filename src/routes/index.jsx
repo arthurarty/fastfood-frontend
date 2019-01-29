@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import LoginView from '../views/LoginView';
 import SignUpView from '../views/SignUpView';
 import OrdersView from '../views/orders/OrdersView';
 import ManageOrders from '../views/orders/ManageOrders';
@@ -17,7 +16,7 @@ const Routes = () => (
   <Provider store={store}>
     <Router>
       <Switch>
-        <Route exact path="/" component={LoginView} />
+        <Route exact path="/" component={SignUpView} />
         <Route path="/signup" component={SignUpView} />
         <Route path="/order" component={ManageOrders} />
         <Route path="/order/:id" component={ManageOrders} />
