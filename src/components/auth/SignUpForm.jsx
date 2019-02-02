@@ -2,24 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextInput from '../common/TextInput';
 import PasswordInput from '../common/PasswordInput';
+import NumberInput from '../common/NumberInput';
 
-const LoginForm = ({
+const SignUpForm = ({
   user, onSave, onChange, loading,
 }) => {
   return (
-    <div className="col-lg-12 col-md-12 col-sm-12">
+    <div id="signUpForm" className="col-lg-12 col-md-12 col-sm-12">
       <form>
         <h1 className="text-center">Sign Up</h1>
         <TextInput
           name="email"
-          label="email"
+          label="Email"
           value={user.email}
+          onChange={onChange}
+        />
+        <TextInput
+          name="name"
+          label="Name"
+          value={user.name}
           onChange={onChange}
         />
         <PasswordInput
           name="password"
-          label="password"
+          label="Password"
           value={user.password}
+          onChange={onChange}
+        />
+        <NumberInput
+          name="role"
+          label="Role"
+          value={user.role}
           onChange={onChange}
         />
         <input
@@ -34,11 +47,11 @@ const LoginForm = ({
   );
 };
 
-LoginForm.defaultProps = {
+SignUpForm.defaultProps = {
   loading: false,
 };
 
-LoginForm.propTypes = {
+SignUpForm.propTypes = {
   user: PropTypes.shape({
     email: PropTypes.string,
   }).isRequired,
@@ -48,4 +61,4 @@ LoginForm.propTypes = {
 };
 
 
-export default LoginForm;
+export default SignUpForm;
